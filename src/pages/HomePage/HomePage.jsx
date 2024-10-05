@@ -1,6 +1,12 @@
 import Header from "../../components/Header/Headre";
 
 import { StyledBook, StyledHome } from "./StyledHome";
+import livro from '../../assets/livro.png';
+import autor from '../../assets/autor.png';
+import sobre from '../../assets/sobre.png';
+
+import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 export default function HomePage() {
 
@@ -12,16 +18,13 @@ export default function HomePage() {
 
             <StyledBook>
 
-                <div id="pagina1">
-
-
-                </div>
-                <div id="pagina2">
-
-
-                </div>
-
+               <Link to={"/livros"}><img src={livro} alt="img" /></Link> 
+               <Link to={"/autores"}><img src={autor} alt="img" /></Link> 
+               <Link to={"#"}><img src={sobre} alt="img" /></Link> 
+             
             </StyledBook>
+
+            <Footer />
 
         </StyledHome>
 

@@ -1,5 +1,6 @@
 import Header from "../../components/Header/Headre";
-import { StyledHome } from "./StyledHome";
+
+import { StyledBook, StyledHome } from "./StyledHome";
 
 export default function HomePage() {
 
@@ -9,7 +10,18 @@ export default function HomePage() {
 
             <Header />
 
-           
+            <StyledBook>
+
+                <div id="pagina1">
+
+
+                </div>
+                <div id="pagina2">
+
+
+                </div>
+
+            </StyledBook>
 
         </StyledHome>
 

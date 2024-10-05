@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { body } from "../constants/color"
 
 const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -33,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         font-family: 'Lexend Deca', sans-serif;
+        background-color: ${body};
     }
 
     ol, ul {

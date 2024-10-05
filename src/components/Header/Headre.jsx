@@ -1,4 +1,4 @@
-import { StyledHeader } from "./StyledHeadre";
+import { StyledHeader, StyledImg, StyledLink } from "./StyledHeadre";
 import logo from "../../assets/logo.png"
 import { Link } from "react-router-dom";
 
@@ -6,20 +6,18 @@ export default function Header() {
     return (
         <StyledHeader>
 
-            <Link to={'/'}>
+            <StyledImg to={'/'}>
                 <div id="BoxImg">
                     <img src={logo} alt="logo" />
                 </div>
+            </StyledImg>
 
-            </Link>
 
-
-            <div id="links">
+            <StyledLink>
                 <Link to={"/"}><p>HOME</p></Link>
                 <Link to={"/livros"}><p>LIVROS</p></Link>
                 <Link to={"/autores"}><p>AUTORES</p></Link>
-               
-            </div>
+            </StyledLink>
 
 
         </StyledHeader>

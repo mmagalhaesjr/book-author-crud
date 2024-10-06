@@ -8,19 +8,11 @@ export const StyledHeader = styled.header`
     position: fixed;
     top: 0;
     background-color: ${header};
-
     display: flex;
     align-items: center;
     justify-content: center;
 
-
-   
-  
-  
-
-
 `
-
 
 export const StyledLink = styled(Link)`
         width: 80%;

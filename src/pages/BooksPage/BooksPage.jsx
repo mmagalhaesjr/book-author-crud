@@ -1,23 +1,25 @@
-import { StyledBooks } from "./StyledBooks";
-import Header from "../../components/Header/Headre";
-import BookForm from "../../components/BookForm/BookForm";
-
+import * as Dialog from "@radix-ui/react-dialog"
+import { Container} from "./StyledBooks";
+import FormDialog from "../../components/FormDialog/FormDialog";
+import Header from "../../components/Header/Header";
 
 export default function BooksPage() {
 
     return (
 
-        <StyledBooks>
-            <Header />
+            <Container>
 
-            <BookForm />
+                <Header />
+                <Dialog.Root>
 
+                    <Dialog.Trigger>criar</Dialog.Trigger>
 
+                    <FormDialog type="book"></FormDialog>
 
+                </Dialog.Root>
 
-           
+            </Container>
 
-        </StyledBooks>
 
     )
 

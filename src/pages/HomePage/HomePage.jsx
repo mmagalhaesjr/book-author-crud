@@ -1,10 +1,8 @@
-import Header from "../../components/Header/Headre";
-
+import Header from "../../components/Header/Header";
 import { StyledBook, StyledHome } from "./StyledHome";
 import livro from '../../assets/livro.png';
 import autor from '../../assets/autor.png';
 import sobre from '../../assets/sobre.png';
-
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 

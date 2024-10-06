@@ -1,4 +1,4 @@
-import { StyledHeader, StyledImg, StyledLink } from "./StyledHeadre";
+import { StyledHeader, StyledImg, StyledLink } from "./StyledHeader";
 import logo from "../../assets/logo.png"
 import { Link } from "react-router-dom";
 

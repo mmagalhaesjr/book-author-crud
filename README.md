@@ -6,9 +6,9 @@ Esta é uma aplicação web simples e intuitiva, desenvolvida para gerenciar liv
 
 - Cadastro de Livros: Adicione novos livros com informações como nome, autor e número de páginas.
 
--Visualização de Livros: Consulte todos os livros cadastrados em uma lista, com a opção de visualizar detalhes específicos.
+- Visualização de Livros: Consulte todos os livros cadastrados em uma lista, com a opção de visualizar detalhes específicos.
 
--Exclusão de Livros: Remova livros da lista com um simples clique, após confirmação.
+- Exclusão de Livros: Remova livros da lista com um simples clique, após confirmação.
 
 - Cadastro de Autores: Cadastre autores, incluindo informações como nome e e-mail.
 

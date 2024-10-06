@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const StyledBooks = styled.main`
-    width: 100%;
-    height: 100vh;
 
-    border: solid 2px red;
+export const Container = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 100px;
 
 `

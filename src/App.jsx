@@ -4,9 +4,6 @@ import HomePage from './pages/HomePage/HomePage';
 import BooksPage from './pages/BooksPage/BooksPage';
 import AuthorsPage from './pages/AuthorsPage/AuthorsPage';
 
-
-
-
 export default  function App() {
     return (
         <BrowserRouter>

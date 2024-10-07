@@ -8,7 +8,7 @@ export const StyledMenuMobile = styled.div`
   position: fixed; 
   top: 100px; 
   width: 100%;
-  height: calc(50vh - 100px);
+  height: 100vh;
   background-color: #000000d3;
   z-index: 999; 
   opacity: 0;
@@ -16,24 +16,19 @@ export const StyledMenuMobile = styled.div`
   transition: 0.5s;
   color: #ffffff;
 
-  .nav-lista {
-    text-align: center;
-    color: #ffffff;
-  }
-
   nav {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
     width: 100%;
     height: 100%;
     color: #ffffff;
     flex-direction: column;
     transform: scale(0);
     transition: 1s;
-    
     gap: 1rem;
-
-    display: flex;
-    align-items: start;
-    justify-content: center;
+    margin-top: 100px;
+    
   }
 
   a {
@@ -50,27 +45,6 @@ export const StyledMenuMobile = styled.div`
       transition: 1s;
       background-color: #a0027ebf;
     }
-  }
-
-  #cxicones{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .circuloIcone{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ffffff;
-
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-  }
-  .icone{
-    font-size: 1.5rem;
-    color: #000000;
   }
 
   ${({ mobile }) =>

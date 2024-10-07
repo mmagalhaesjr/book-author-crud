@@ -13,7 +13,6 @@ export default function AuthorForm({ setOpen }) {
 
     const { authors } = useContext(DataContext);
     const isFormValid = name;
-    console.log(authors)
 
     function createAuthor(data) {
         const duplicatedAuthor = authors.find(a => a.name === data.name);

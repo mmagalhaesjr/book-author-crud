@@ -9,7 +9,7 @@ export default function MenuMobile({ mobileAtivado }) {
 
   return (
     <StyledMenuMobile mobile={mobileAtivado}>
-      <nav className="nav-lista">
+      <nav>
         <Link to={"/"} >HOME</Link>
         <Link to={"/livros"} >LIVROS</Link>
         <Link to={"/autores"} >AUTORES</Link>

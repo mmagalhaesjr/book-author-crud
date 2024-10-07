@@ -11,6 +11,8 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
+  
 
   button {
     background-color: transparent;

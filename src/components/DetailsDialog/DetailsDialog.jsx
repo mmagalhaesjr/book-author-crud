@@ -5,7 +5,7 @@ import { Content, Overlay } from "./StyledDetailsDialog";
 import PropTypes from "prop-types";
 
 export default function DetailsDialog({ details, type }) {
-    console.log(details)
+
     return (
 
         <Dialog.Portal>
@@ -28,7 +28,7 @@ export default function DetailsDialog({ details, type }) {
 
                     {type === "author" && (
                         <Dialog.Title>
-                            <h1>Autor: <span>{details.name} {details.id}</span> </h1>
+                            <h1>Autor: <span>{details.name}</span> </h1>
                             <h1>Email: <span>{details.email ? details.email : "Não informado"}</span> </h1>
                         </Dialog.Title>
                     )}

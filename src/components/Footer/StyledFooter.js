@@ -8,4 +8,16 @@ export const StyledFooter = styled.footer`
     align-items: start;
     justify-content: center;
 
+    img{
+            width: 600px;
+        }
+
+
+    @media (max-width:600px) {
+        img{
+            width: 120%;
+        }
+    }
+
+
 `

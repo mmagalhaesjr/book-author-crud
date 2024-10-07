@@ -2,12 +2,19 @@ import styled from "styled-components";
 import { text } from "../../constants/color";
 
 
-
+import fundo from '../../assets/fundo.png'
+const foto = `url(${fundo})`;
 
 export const StyledHome = styled.main`
     width: 100%;
     height: 100vh;
-    background-color: ${text};
+    /* background-color: ${text}; */
+    overflow: hidden;
+
+    background-image: ${foto};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 5% 90%;
 
     display: flex;
     flex-direction: column;

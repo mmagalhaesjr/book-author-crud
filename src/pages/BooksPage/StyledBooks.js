@@ -57,10 +57,25 @@ p{
 
 export const StyledTabela = styled.div`
 width: 50%;
+max-height: 700px;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
+overflow: auto;
+ &::-webkit-scrollbar {
+         width: 3px;
+         height: 5px; 
+         border: solid 2px #000000ff;
+         border-radius: 5px;
+     }
+     &::-webkit-scrollbar-thumb {
+         background-color: #fffffffd;
+         border-radius: 5px;
+         width: 5px;
+         height: 10px; 
+     }
 
   border: solid 2px blue;
 

@@ -18,10 +18,8 @@ export default function AuthorForm({ setOpen }) {
     function createAuthor(data) {
         const duplicatedAuthor = authors.find(a => a.name === data.name);
         if (duplicatedAuthor) {return alert('Autor já cadastrado')}
-
         authors.push({ id: authors.length + 1, name: data.name, email: data.email });
         localStorage.setItem('authors', JSON.stringify(authors));
-        alert('oi')
         setOpen(false)
 
     }
@@ -54,5 +52,5 @@ export default function AuthorForm({ setOpen }) {
 }
 
 AuthorForm.propTypes = {
-    setOpen: PropTypes.bool.isRequired,
+    setOpen: PropTypes.func.isRequired,
 };

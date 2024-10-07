@@ -34,7 +34,7 @@ export default function BookForm({ setOpen }) {
                 return alert('Autor já cadastrado');
 
             } else {
-                const newBook = { id: books.length + 1, name: data.booksName, author_id: authors.length + 1, pages: data.numberPage, }
+                const newBook = { id: books.length + 1, name: data.booksName, author_id: Number(authors.length + 1), pages: data.numberPage, }
                 books.push(newBook)
                 localStorage.setItem('books', JSON.stringify(books));
                 authors.push({ id: authors.length + 1, name: data.newAuthor, email: data.email });
@@ -44,8 +44,7 @@ export default function BookForm({ setOpen }) {
             }
         }
 
-
-        const newBook = { id: books.length + 1, name: data.booksName, author_id: data.author, pages: data.numberPages }
+        const newBook = { id: books.length + 1, name: data.booksName, author_id: Number(data.author), pages: data.numberPages }
         books.push(newBook)
 
         localStorage.setItem('books', JSON.stringify(books));

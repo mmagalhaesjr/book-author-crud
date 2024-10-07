@@ -10,7 +10,7 @@ export default function FormDialog({ type, setOpen }) {
 
         <Dialog.Portal>
             <Overlay>
-                <Content>
+                <Content aria-describedby="">
                     {type === "book" && (
                         <>
                             <Dialog.Title>

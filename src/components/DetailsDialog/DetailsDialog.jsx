@@ -5,7 +5,7 @@ import AuthorForm from "../AuthorForm/AuthorForm";
 import PropTypes from "prop-types";
 
 export default function DetailsDialog({ details, type, setOpen }) {
-
+ console.log(details)
     return (
 
         <Dialog.Portal>

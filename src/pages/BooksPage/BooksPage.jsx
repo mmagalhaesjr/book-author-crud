@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import { StyledContainer, StyledTabela } from "./StyledBooks";
 import FormDialog from "../../components/FormDialog/FormDialog";
 import Header from "../../components/Header/Header";
@@ -12,6 +13,7 @@ import { TbListDetails } from "react-icons/tb";
 export default function BooksPage() {
     const { booksWithAuthors } = useContext(DataContext);
     const [open, setOpen] = useState(false);
+
 
     return (
         <StyledContainer>
@@ -37,9 +39,13 @@ export default function BooksPage() {
                                     <DetailsDialog details={b} type="book" setOpen={setOpen}></DetailsDialog>
                                 </Dialog.Root>
 
-                                <div id="buttonDelete">
-                                    Deletar <FaRegTrashAlt />
-                                </div>
+                              
+
+                                        <div id="buttonDelete">
+                                            Deletar <FaRegTrashAlt />
+                                        </div>
+
+
                             </div>
                         ))}
                     </StyledTabela>

@@ -56,13 +56,17 @@ p{
 `
 
 export const StyledTabela = styled.div`
-width: 100%;
+width: 50%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 
   border: solid 2px blue;
+
+  @media (max-width:600px) {
+    width: 100%;
+  }
 
 
 #container{

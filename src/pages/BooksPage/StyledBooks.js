@@ -46,6 +46,13 @@ button{
 }
 }
 
+p{
+    text-align: center;
+    width: 70%;
+    color: #ffffff;
+    font-size: 20px;
+}
+
 `
 
 export const StyledTabela = styled.div`

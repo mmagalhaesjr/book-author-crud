@@ -11,6 +11,7 @@ const [authors, setAuthors] = useState([]);
 
 useEffect(() => {
     const storedBooks = JSON.parse(localStorage.getItem('books')) || [];
+    // console.log(storedBooks)
     const storedAuthors = JSON.parse(localStorage.getItem('authors')) || [];
     setBooks(storedBooks);
     setAuthors(storedAuthors);

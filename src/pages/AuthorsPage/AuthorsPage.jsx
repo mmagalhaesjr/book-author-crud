@@ -1,13 +1,13 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import FormDialog from "../../components/FormDialog/FormDialog";
 import Header from "../../components/Header/Header";
-import { Container } from "../BooksPage/StyledBooks";
+import { StyledContainer } from "../BooksPage/StyledBooks";
 
 export default function AuthorsPage() {
 
     return (
 
-        <Container>
+        <StyledContainer>
 
         <Header />
         <Dialog.Root>
@@ -18,7 +18,7 @@ export default function AuthorsPage() {
 
         </Dialog.Root>
 
-    </Container>
+    </StyledContainer>
 
     )
 

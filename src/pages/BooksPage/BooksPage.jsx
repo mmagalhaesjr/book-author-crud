@@ -1,5 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog"
-import { Container } from "./StyledBooks";
+import { StyledContainer, StyledTabela } from "./StyledBooks";
 import FormDialog from "../../components/FormDialog/FormDialog";
 import Header from "../../components/Header/Header";
 import { useContext, useState } from "react";
@@ -11,21 +11,40 @@ export default function BooksPage() {
 
     return (
 
-        <Container>
+        <StyledContainer>
 
             <Header />
 
+            <section>
 
-            <Dialog.Root open={open} onOpenChange={setOpen}>
+                <StyledTabela>
+                    {books.map((b) => (
+                        <div id="nameBook" key={b.id}>
+                                <p>{b.name}</p>
+                               
+                                
+                        </div>
+                    ))}
+                    
+                </StyledTabela>
+                
 
-                <Dialog.Trigger>criar</Dialog.Trigger>
+                <Dialog.Root open={open} onOpenChange={setOpen}>
 
-                <FormDialog type="book" setOpen={setOpen}></FormDialog>
+                    <Dialog.Trigger>
+                        <button>
+                            CRIAR
+                        </button>
+                    </Dialog.Trigger>
 
-            </Dialog.Root>
-            {books.map((b) => (
-                <p>{b.name}</p>))}
-        </Container>
+                    <FormDialog type="book" setOpen={setOpen}></FormDialog>
+
+                </Dialog.Root>
+
+            </section>
+
+
+        </StyledContainer>
 
 
     )

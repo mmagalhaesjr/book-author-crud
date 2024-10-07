@@ -50,7 +50,7 @@ export default function BookForm({ setOpen }) {
 
         localStorage.setItem('books', JSON.stringify(books));
         setOpen(false)
-
+        window.location.reload();
     }
 
 
@@ -105,7 +105,7 @@ export default function BookForm({ setOpen }) {
             />
 
 
-            <StyledButton disabled={!isFormValid} type="submit">Criar</StyledButton>
+            <StyledButton  disabled={!isFormValid} type="submit">Criar</StyledButton>
         </StyledForm>
 
     );

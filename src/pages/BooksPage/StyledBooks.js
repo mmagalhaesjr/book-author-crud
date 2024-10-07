@@ -92,10 +92,12 @@ span{
 #buttonDetails{
     width: fit-content;
     height: 50px;
+    border-radius: 10px;
     background-color: #05860a;
     color: #ffffff;
     padding: 5px;
     font-weight: bolder;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
@@ -106,10 +108,12 @@ span{
 #buttonDelete{
     width: fit-content;
     height: 50px;
+    border-radius: 10px;
     background-color: #860505;
     color: #ffffff;
     padding: 5px;
     font-weight: bolder;
+    cursor: pointer;
 
     display: flex;
     align-items: center;

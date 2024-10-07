@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const DataContext = createContext();
 
-export function DataContextProvider({ children }){
+export default function DataContextProvider({ children }){
 
 const [books, setBooks] = useState([]);
 const [authors, setAuthors] = useState([]);

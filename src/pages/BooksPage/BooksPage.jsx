@@ -9,7 +9,6 @@ export default function BooksPage() {
     const { books } = useContext(DataContext);
     const [open, setOpen] = useState(false)
 
-console.log(books)
     return (
 
         <Container>

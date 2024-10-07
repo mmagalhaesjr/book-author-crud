@@ -29,7 +29,7 @@ export default function BookForm({ setOpen }) {
 
 
         if (data.author === "new") {
-            const duplicatedAuthor = authors.find(a => a.name === data.newAuthor || author.email === data.email);
+            const duplicatedAuthor = authors.find(a => a.name === data.newAuthor);
             if (duplicatedAuthor) {
                 return alert('Autor já cadastrado');
 

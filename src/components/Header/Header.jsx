@@ -1,25 +1,47 @@
 import { StyledHeader, StyledImg, StyledLink } from "./StyledHeader";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import MenuMobile from "../MenuMobile/MenuMobile";
+import { useState } from "react";
 
 export default function Header() {
-    return (
-        <StyledHeader>
+  const [mobileAtivado, setMobileAtivado] = useState(false);
 
-            <StyledImg to={'/'}>
-                <div id="BoxImg">
-                    <img src={logo} alt="logo" />
-                </div>
-            </StyledImg>
+  function mobile() {
+    setMobileAtivado(!mobileAtivado);
 
+    if (!mobileAtivado) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
 
-            <StyledLink>
-                <Link to={"/"}><p>HOME</p></Link>
-                <Link to={"/livros"}><p>LIVROS</p></Link>
-                <Link to={"/autores"}><p>AUTORES</p></Link>
-            </StyledLink>
+  return (
+    <StyledHeader mobile={mobileAtivado}>
 
+      <MenuMobile mobileAtivado={mobileAtivado} setMobileAtivado={setMobileAtivado} />
 
-        </StyledHeader>
-    )
+    
+
+      <StyledImg to={'/'}>
+        <div id="BoxImg">
+          <img src={logo} alt="logo" />
+        </div>
+      </StyledImg>
+
+      <StyledLink>
+        <Link to={"/"}><p>HOME</p></Link>
+        <Link to={"/livros"}><p>LIVROS</p></Link>
+        <Link to={"/autores"}><p>AUTORES</p></Link>
+      </StyledLink>
+
+      <button onClick={mobile}>
+        <span className="linha"></span>
+        <span className="linha"></span>
+        <span className="linha"></span>
+      </button>
+
+    </StyledHeader>
+  );
 }

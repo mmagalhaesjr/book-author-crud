@@ -5,6 +5,10 @@ import Header from "../../components/Header/Header";
 import { useContext, useState } from "react";
 import { DataContext } from "../../contexts/DataContext";
 
+import { FaRegTrashAlt } from "react-icons/fa";
+import { TbListDetails } from "react-icons/tb";
+
+
 export default function BooksPage() {
     const { booksWithAuthors } = useContext(DataContext);
     const [open, setOpen] = useState(false)
@@ -21,11 +25,11 @@ export default function BooksPage() {
                     {booksWithAuthors.map((b) => (
                         <div id="container" key={b.id}>
 
-                          
-                                <p>Livro: <span>{b.name}</span></p>
 
-                                <div id="buttonDetails">Detalhes</div>
-                                <div id="buttonDelete">Deletar</div>
+                            <p>Livro: <span>{b.name}</span></p>
+
+                            <div id="buttonDetails">Detalhes <TbListDetails /></div>
+                            <div id="buttonDelete">Deletar  <FaRegTrashAlt /> </div>
 
                         </div>
                     ))}

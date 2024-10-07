@@ -89,6 +89,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 
 }
 #buttonDelete{
@@ -102,6 +103,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 }
 
 `

@@ -4,7 +4,7 @@ import { Content, Overlay } from "./StyledFormDialog";
 import AuthorForm from "../AuthorForm/AuthorForm";
 import PropTypes from "prop-types";
 
-export default function FormDialog({ type }) {
+export default function FormDialog({ type, setOpen }) {
 
     return (
 
@@ -15,14 +15,14 @@ export default function FormDialog({ type }) {
                         <>
                             <Dialog.Title>
                                 <h1>Cadastrar Livro</h1></Dialog.Title>
-                            <BookForm />
+                            <BookForm setOpen={setOpen}/>
                         </>
                     )}
 
                     {type === "author" && (
                         <>
                             <Dialog.Title><h1>Cadastrar Autor</h1></Dialog.Title>
-                            <AuthorForm />
+                            <AuthorForm setOpen={setOpen}/>
                         </>
                     )}
 
@@ -37,5 +37,6 @@ export default function FormDialog({ type }) {
 }
 
 FormDialog.propTypes = {
-  type: PropTypes.string.isRequired, // Exemplo de validação obrigatória
+  type: PropTypes.string.isRequired,
+  setOpen: PropTypes.bool.isRequired,
 };

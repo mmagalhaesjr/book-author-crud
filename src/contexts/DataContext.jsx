@@ -11,15 +11,30 @@ const [authors, setAuthors] = useState([]);
 
 useEffect(() => {
     const storedBooks = JSON.parse(localStorage.getItem('books')) || [];
-    // console.log(storedBooks)
+    console.log(storedBooks)
     const storedAuthors = JSON.parse(localStorage.getItem('authors')) || [];
     setBooks(storedBooks);
     setAuthors(storedAuthors);
   }, []);
 
 
+  const booksWithAuthors = books.map(b => {
+    const author = authors.find(a => a.id === b.author_id);
+    return {
+        id: b.id,
+        name: b.name,
+        pages: b.pages,
+        author: {
+            id: author ? author.id : null,
+            name: author ? author.name : null,
+            email: author ? author.email : null,
+        },
+    };
+});
+
+
   return (
-    <DataContext.Provider value={{ books, authors }}>
+    <DataContext.Provider value={{ books, authors,booksWithAuthors }}>
       {children}
     </DataContext.Provider>
   );

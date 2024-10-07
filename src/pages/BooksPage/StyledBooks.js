@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+
 export const StyledContainer = styled.div`
 width: 100%;
 height: 100vh;
@@ -48,6 +49,7 @@ button{
 `
 
 export const StyledTabela = styled.div`
+width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -56,8 +58,50 @@ justify-content: center;
   border: solid 2px blue;
 
 
-#nameBook{
+#container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
     border: solid 2px orange;
+   
+}
+
+p{
+    width: 70%;
+    color: #ffffff;
+    font-size: 20px;
+}
+span{
+    font-weight: bold;
+}
+
+#buttonDetails{
+    width: fit-content;
+    height: 50px;
+    background-color: #05860a;
+    color: #ffffff;
+    padding: 5px;
+    font-weight: bolder;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#buttonDelete{
+    width: fit-content;
+    height: 50px;
+    background-color: #860505;
+    color: #ffffff;
+    padding: 5px;
+    font-weight: bolder;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 `

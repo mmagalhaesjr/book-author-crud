@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import { DataContext } from "../../contexts/DataContext";
 
 export default function BooksPage() {
-    const { books } = useContext(DataContext);
+    const { booksWithAuthors } = useContext(DataContext);
     const [open, setOpen] = useState(false)
 
     return (
@@ -18,16 +18,20 @@ export default function BooksPage() {
             <section>
 
                 <StyledTabela>
-                    {books.map((b) => (
-                        <div id="nameBook" key={b.id}>
-                                <p>{b.name}</p>
-                               
-                                
+                    {booksWithAuthors.map((b) => (
+                        <div id="container" key={b.id}>
+
+                          
+                                <p>Livro: <span>{b.name}</span></p>
+
+                                <div id="buttonDetails">Detalhes</div>
+                                <div id="buttonDelete">Deletar</div>
+
                         </div>
                     ))}
-                    
+
                 </StyledTabela>
-                
+
 
                 <Dialog.Root open={open} onOpenChange={setOpen}>
 

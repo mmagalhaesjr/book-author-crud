@@ -1,5 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import * as AlertDialog from "@radix-ui/react-alert-dialog";
+// import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import { StyledContainer, StyledTabela } from "./StyledBooks";
 import FormDialog from "../../components/FormDialog/FormDialog";
 import Header from "../../components/Header/Header";
@@ -29,22 +29,23 @@ export default function BooksPage() {
                                     Livro: <span>{b.name}</span>
                                 </p>
 
-                                <Dialog.Root>
-                                    <Dialog.Trigger>
+                             
+                                    <Dialog.Root>
+                                        <Dialog.Trigger>
 
-                                        <div id="buttonDetails">
-                                            Detalhes <TbListDetails />
-                                        </div>
-                                    </Dialog.Trigger>
-                                    <DetailsDialog details={b} type="book" setOpen={setOpen}></DetailsDialog>
-                                </Dialog.Root>
+                                            <div id="buttonDetails">
+                                                Detalhes <TbListDetails />
+                                            </div>
+                                        </Dialog.Trigger>
+                                        <DetailsDialog details={b} type="book" setOpen={setOpen}></DetailsDialog>
+                                    </Dialog.Root>
 
+
+
+                                    <div id="buttonDelete">
+                                        Deletar <FaRegTrashAlt />
+                                    </div>
                               
-
-                                        <div id="buttonDelete">
-                                            Deletar <FaRegTrashAlt />
-                                        </div>
-
 
                             </div>
                         ))}
@@ -52,8 +53,9 @@ export default function BooksPage() {
                 )}
 
                 <Dialog.Root open={open} onOpenChange={setOpen}>
+
                     <Dialog.Trigger>
-                        <button>CRIAR</button>
+                        <button id="bottonCreate">CRIAR</button>
                     </Dialog.Trigger>
 
                     <FormDialog type="book" setOpen={setOpen}></FormDialog>

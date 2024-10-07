@@ -12,24 +12,35 @@ export const Overlay = styled(Dialog.Overlay)`
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
+
+  
 `;
 
 export const Content = styled(Dialog.Content)`
+width: fit-content;
 position: fixed;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 background-color: ${body};
 border-radius: 8px;
-padding: 20px;
 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-width: 90%;
-max-width: 500px;
+padding: 30px;
+
 
 h1{
-    font-size: 20px;
+  font-size: 20px;
   line-height: 26px;
-  text-align: center;
+  text-align: left;
   color:${primary};
+  margin: 10px;
+}
+
+span{
+  font-weight: bold;
+}
+
+@media (max-width:600px) {
+  width:95%;
 }
 `;

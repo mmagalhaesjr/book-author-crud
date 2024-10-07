@@ -13,33 +13,28 @@ justify-content: center;
 
 
 section{
-    width: 90%;
+    width: 100%;
     height: 70%;
-    border: solid 2px red;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:center;
+    gap:20px;
 }
 
-#boxInfoBooks{
 
-    border: solid 2px blue;
-}
-
-button{
-    width: 100px;
+#bottonCreate{
+    width: 300px;
     height: 50px;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
     background: linear-gradient(0deg, rgba(82,46,139,1) 0%, rgba(247,218,247,1) 100%);
-
-    font-size: 12px;
     font-weight: bolder;
     color: #ffffff;
     text-shadow: 0px 1px 0px #2f0177;
+    font-size: 20px;
+
     
 &:hover{
     background: linear-gradient(0deg, rgba(247,218,247,1) 0%, rgba(82,46,139,1) 100%);
@@ -61,7 +56,8 @@ max-height: 700px;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: start;
+gap: 5px;
 
 overflow: auto;
  &::-webkit-scrollbar {
@@ -77,37 +73,39 @@ overflow: auto;
          height: 10px; 
      }
 
-  border: solid 2px blue;
-
-  @media (max-width:600px) {
-    width: 100%;
-  }
+ 
 
 
 #container{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 800px;
     gap: 5px;
     padding: 5px;
-    border: solid 2px orange;
-   
+    background-color: #ffffff1c;
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
 
-p{
-    width: 70%;
+
+
+#container p{
+    width: 80%;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 2rem;
+    text-align: left;
+    /* border: solid 2px red; */
 }
 span{
     font-weight: bold;
 }
 
+
 #buttonDetails{
     width: fit-content;
     height: 50px;
-    border-radius: 10px;
+   
     background-color: #05860a;
     color: #ffffff;
     padding: 5px;
@@ -118,12 +116,12 @@ span{
     align-items: center;
     justify-content: center;
     gap: 5px;
-
 }
+
 #buttonDelete{
     width: fit-content;
     height: 50px;
-    border-radius: 10px;
+   
     background-color: #860505;
     color: #ffffff;
     padding: 5px;
@@ -135,5 +133,17 @@ span{
     justify-content: center;
     gap: 5px;
 }
+
+@media (max-width:600px) {
+    width: 100%;
+
+    #container p{
+    width: 80%;
+    color: #ffffff;
+    font-size:15px;
+    text-align: left;
+    /* border: solid 2px red; */
+}
+  }
 
 `

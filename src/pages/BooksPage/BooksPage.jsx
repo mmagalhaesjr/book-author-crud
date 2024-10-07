@@ -4,6 +4,7 @@ import FormDialog from "../../components/FormDialog/FormDialog";
 import Header from "../../components/Header/Header";
 import { useContext, useState } from "react";
 import { DataContext } from "../../contexts/DataContext";
+import DetailsDialog from "../../components/DetailsDialog/DetailsDialog";
 
 import { FaRegTrashAlt } from "react-icons/fa";
 import { TbListDetails } from "react-icons/tb";
@@ -25,9 +26,17 @@ export default function BooksPage() {
                                 <p>
                                     Livro: <span>{b.name}</span>
                                 </p>
-                                <div id="buttonDetails">
-                                    Detalhes <TbListDetails />
-                                </div>
+
+                                <Dialog.Root>
+                                    <Dialog.Trigger>
+
+                                        <div id="buttonDetails">
+                                            Detalhes <TbListDetails />
+                                        </div>
+                                    </Dialog.Trigger>
+                                    <DetailsDialog details={b} type="book" setOpen={setOpen}></DetailsDialog>
+                                </Dialog.Root>
+
                                 <div id="buttonDelete">
                                     Deletar <FaRegTrashAlt />
                                 </div>

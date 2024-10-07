@@ -113,5 +113,5 @@ export default function BookForm({ setOpen }) {
 }
 
 BookForm.propTypes = {
-    setOpen: PropTypes.bool.isRequired,
+    setOpen: PropTypes.func.isRequired,
 };

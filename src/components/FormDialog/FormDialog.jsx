@@ -38,5 +38,5 @@ export default function FormDialog({ type, setOpen }) {
 
 FormDialog.propTypes = {
   type: PropTypes.string.isRequired,
-  setOpen: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };

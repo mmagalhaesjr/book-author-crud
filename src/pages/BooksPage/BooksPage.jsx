@@ -18,6 +18,9 @@ export default function BooksPage() {
     return (
         <StyledContainer>
             <Header />
+            
+            <h1 id="titulo">Livros</h1>
+
             <section>
                 {booksWithAuthors.length === 0 ? (
                     <p>Não existe livros na biblioteca</p>

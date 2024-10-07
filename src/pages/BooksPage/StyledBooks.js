@@ -11,10 +11,17 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 
+#titulo{
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 
 section{
     width: 100%;
-    height: 70%;
+    height: 60%;
 
     display: flex;
     flex-direction: column;
@@ -59,6 +66,9 @@ align-items: center;
 justify-content: start;
 gap: 5px;
 
+border-top: solid 5px #ffffff06;
+border-bottom: solid 5px #ffffff06;
+
 overflow: auto;
  &::-webkit-scrollbar {
          width: 3px;
@@ -78,7 +88,7 @@ overflow: auto;
 
 #container{
     width: 100%;
-    max-width: 800px;
+    max-width: 950px;
     gap: 5px;
     padding: 5px;
     background-color: #ffffff1c;
@@ -93,7 +103,7 @@ overflow: auto;
 #container p{
     width: 80%;
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: left;
     /* border: solid 2px red; */
 }

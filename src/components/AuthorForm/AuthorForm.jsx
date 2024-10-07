@@ -3,21 +3,23 @@ import StyledForm from "../StyledForm"
 import { StyledInput } from "../StyledInput"
 import { useForm } from "react-hook-form"
 
-
-
-export default function AuthorForm() {
+export default function AuthorForm({ setOpen }) {
 
     const { register, handleSubmit, watch } = useForm();
-
-    const novoAutor = watch('novoAutor');
-    const isFormValid = novoAutor;
+    const newAuthor = watch('newAuthor');
+    const isFormValid = newAuthor;
 
 
     function createAuthor(data) {
-        console.log({
-            novoAutor: data.novoAutor,
-            email: data.email,
-        });
+        const duplicatedAuthor = authors.find(a => a.name === data.newAuthor || author.email === data.email);
+        if (duplicatedAuthor) {
+            return alert('Autor já cadastrado')
+        }
+
+        authors.push({ id: authors.length + 1, name: data.newAuthor, email: data.email });
+        localStorage.setItem('authors', JSON.stringify(authors));
+        setOpen(false)
+
     }
 
 
@@ -26,10 +28,10 @@ export default function AuthorForm() {
 
             <StyledInput
                 type="text"
-                id="novoAutor"
+                id="newAuthor"
 
                 placeholder="Nome do Autor"
-                {...register('novoAutor', { required: 'Nome do autor é obrigatório se estiver criando um novo' })}
+                {...register('newAuthor', { required: 'Nome do autor é obrigatório se estiver criando um novo' })}
             />
 
             <StyledInput
@@ -39,10 +41,14 @@ export default function AuthorForm() {
                 {...register('email')}
             />
 
-<StyledButton disabled={!isFormValid} type="submit">Criar</StyledButton>
+            <StyledButton disabled={!isFormValid} type="submit">Criar</StyledButton>
 
         </StyledForm >
-        
+
     );
 
 }
+
+AuthorForm.propTypes = {
+    setOpen: PropTypes.bool.isRequired,
+};

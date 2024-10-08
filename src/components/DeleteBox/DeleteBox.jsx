@@ -8,21 +8,23 @@ import { DataContext } from "../../contexts/DataContext";
 
 export default function DeleteBox({ id, type }) {
 
-    const { books, authors } = useContext(DataContext);
+    const { books, authors, setBooks, setAuthors } = useContext(DataContext);
 
     function handleDelete(id) {
 
         if (type === "book") {
             const newBooksList = books.filter(book => book.id !== id);
             localStorage.setItem('books', JSON.stringify(newBooksList));
+            setBooks(newBooksList)
         } else {
             const newAuthorsList = authors.filter(author => author.id !== id);
             const newBooksList = books.filter(book => book.author_id !== id);
             localStorage.setItem('authors', JSON.stringify(newAuthorsList));
             localStorage.setItem('books', JSON.stringify(newBooksList));
+            setBooks(newBooksList)
+            setAuthors(newAuthorsList)
         }
 
-        window.location.reload();
     }
     return (
 

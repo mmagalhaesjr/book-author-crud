@@ -18,7 +18,7 @@ export const Overlay = styled(AlertDialog.Overlay)`
 export const Content = styled(AlertDialog.Content)`
 width: 90%;
 max-width: 500px;
-height: 200px;
+height: 230px;
 position: fixed;
 top: 50%;
 left: 50%;

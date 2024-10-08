@@ -9,7 +9,6 @@ import TableRow from "../../components/TableRow/TableRow";
 
 export default function AuthorsPage() {
     const [open, setOpen] = useState(false);
-    
     const { authors } = useContext(DataContext);
  
     return (

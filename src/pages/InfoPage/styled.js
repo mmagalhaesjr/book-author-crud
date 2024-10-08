@@ -12,9 +12,10 @@ margin-top: 100px;
 font-size: 15px;
 
 section{
-    display: flex;
+    width: 95%;
     height: fit-content;
     min-height: 400px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;

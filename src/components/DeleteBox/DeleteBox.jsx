@@ -36,19 +36,28 @@ export default function DeleteBox({ id, type }) {
             <AlertDialog.Portal>
                 <Overlay />
                 <Content>
-                    <AlertDialog.Title>
-                        Você tem certeza que deseja apagar este {type}?
-                    </AlertDialog.Title>
-                    <AlertDialog.Description>
-                        Esta ação não poderá ser desfeita.
-                    </AlertDialog.Description>
+                    <div id="boxText">
+                        <AlertDialog.Title>
+                            Você tem certeza que deseja apagar este {type === "book" ? "livro" : "autor"}?
+                        </AlertDialog.Title>
+                        <AlertDialog.Description>
+                            Esta ação não poderá ser desfeita.
+                            <br></br>
+                            
+                            {type === "author" && "Todos os livros deste autor também serão revomidos."}
+                        </AlertDialog.Description>
+                    </div>
 
-                    <AlertDialog.Cancel asChild>
-                        <button>Cancelar</button>
-                    </AlertDialog.Cancel>
-                    <AlertDialog.Action asChild>
-                        <button onClick={() => handleDelete(id)}>Sim, deletar</button>
-                    </AlertDialog.Action>
+
+                    <div id="boxButton">
+                        <AlertDialog.Cancel asChild>
+                            <button>Cancelar</button>
+                        </AlertDialog.Cancel>
+                        <AlertDialog.Action asChild>
+                            <button onClick={() => handleDelete(id)}>Sim, deletar</button>
+                        </AlertDialog.Action>
+                    </div>
+
 
                 </Content>
             </AlertDialog.Portal>
@@ -61,3 +70,7 @@ export default function DeleteBox({ id, type }) {
 
 }
 
+DeleteBox.propTypes = {
+    type: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+};

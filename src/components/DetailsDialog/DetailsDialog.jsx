@@ -18,7 +18,7 @@ export default function DetailsDialog({ details, type }) {
 
                                 <h1>Número de páginas: <span>{details.pages ? details.pages : "Não informado"}</span> </h1>
 
-                                <h1>Autor:<span>{details.author.name}</span></h1>
+                                <h1>Autor: <span>{details.author.name}</span></h1>
 
                                 <h1>Email do autor: <span> {details.author.email ? details.author.email : "Não informado"}</span></h1>
                                 

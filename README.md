@@ -21,15 +21,16 @@ Esta é uma aplicação web simples e intuitiva, desenvolvida para gerenciar liv
 ## Desenvolvimento
 
 As seguintes ferramentas foram utilizados na construção do projeto:
-<p>
-    <img style='margin: 5px;' src="https://img.shields.io/badge/react-app%20-%2320232a.svg?&style=for-the-badge&color=60ddf9&logo=react&logoColor=%2361DAFB"/>
-  <img style='margin: 5px;' src='https://img.shields.io/badge/styled-components%20-%2320232a.svg?&style=for-the-badge&color=b8679e&logo=styled-components&logoColor=%3a3a3a'>
-  <img style='margin: 5px;' src="https://img.shields.io/badge/react_route%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
-</p>
+
 
 - React JS
 - Styled-Components
 - React-Router-Dom
+- Vite.js
+- Radix UI
+- React Hook Form
+- React Icons
+
 
 ## Iniciando
 

@@ -9,10 +9,10 @@ import PropTypes from "prop-types";
 const stringPattern = (str) => {
     return str
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "") 
-        .replace(/[^\w\s]|_/g, "")       
-        .replace(/\s+/g, "")             
-        .toLowerCase();                  
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^\w\s]|_/g, "")
+        .replace(/\s+/g, "")
+        .toLowerCase();
 };
 
 export default function BookForm({ setOpen }) {
@@ -28,8 +28,9 @@ export default function BookForm({ setOpen }) {
     }
 
     function createBoook(data) {
-      
+
         const normalizedBooksName = stringPattern(data.booksName);
+        const bookId = books[books.length - 1].id + 1 || 1
 
         const duplicatedBook = books.find(b => stringPattern(b.name) === normalizedBooksName);
         if (duplicatedBook) {
@@ -42,28 +43,31 @@ export default function BookForm({ setOpen }) {
             if (duplicatedAuthor) {
                 return alert('Autor já cadastrado');
             } else {
+
+                const authorId = authors[authors.length - 1].id + 1 || 1
                 const newBook = {
-                    id: books.length + 1,
+                    id: bookId,
                     name: data.booksName,
-                    author_id: Number(authors.length + 1),
+                    author_id: authorId,
                     pages: data.numberPages
                 };
                 books.push(newBook);
                 localStorage.setItem('books', JSON.stringify(books));
 
                 authors.push({
-                    id: authors.length + 1,
+                    id: authorId,
                     name: data.newAuthor,
                     email: data.email
                 });
                 localStorage.setItem('authors', JSON.stringify(authors));
                 setOpen(false);
+                window.location.reload();
                 return;
             }
         }
 
         const newBook = {
-            id: books.length + 1,
+            id: bookId,
             name: data.booksName,
             author_id: Number(data.author),
             pages: data.numberPages

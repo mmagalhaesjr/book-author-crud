@@ -21,7 +21,7 @@ export default function HomePage() {
             <StyledBook>
                <Link to={"/livros"}><img src={livro} alt="img" /></Link> 
                <Link to={"/autores"}><img src={autor} alt="img" /></Link> 
-               <Link to={"#"}><img src={sobre} alt="img" /></Link> 
+               <Link to={"/info"}><img src={sobre} alt="img" /></Link> 
             </StyledBook>
 
             <Footer />

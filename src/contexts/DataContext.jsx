@@ -7,8 +7,8 @@ export default function DataContextProvider({ children }){
 
 const [books, setBooks] = useState([]);
 const [authors, setAuthors] = useState([]);
-
-
+console.log(books)
+console.log(authors)
 useEffect(() => {
 
     const storedBooks = JSON.parse(localStorage.getItem('books')) || [];

@@ -46,7 +46,7 @@ export default function BookForm({ setOpen }) {
                 return alert('Autor já cadastrado');
             } else {
 
-                const authorId = authors[authors.length - 1].id + 1 || 1
+                const authorId = authors[authors.length - 1]?.id + 1 || 1
                 const newBook = {
                     id: bookId,
                     name: data.booksName,

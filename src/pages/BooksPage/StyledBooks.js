@@ -34,6 +34,9 @@ section{
     color: #ffffff;
     text-shadow: 0px 1px 0px #2f0177;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     
 &:hover{

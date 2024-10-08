@@ -25,7 +25,7 @@ export default function AuthorsPage() {
                     <StyledTabela>
                         <h1>Autores</h1>
                         {authors.map((author) => (
-                            <TableRow data={author} setOpen={setOpen} type="author"/>
+                            <TableRow key={author.id} data={author} setOpen={setOpen} type="author"/>
                         ))}
                     </StyledTabela>
                 )}

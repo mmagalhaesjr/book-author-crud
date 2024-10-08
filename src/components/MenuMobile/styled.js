@@ -48,7 +48,7 @@ export const StyledMenuMobile = styled.div`
   }
 
   ${({ mobile }) =>
-    mobile &&
+    mobile === "true" &&
     css`
       opacity: 1;
       pointer-events: auto;

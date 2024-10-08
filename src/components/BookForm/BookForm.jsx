@@ -28,9 +28,11 @@ export default function BookForm({ setOpen }) {
     }
 
     function createBoook(data) {
+  
+        const bookId = books[books.length - 1]?.id + 1  || 1
 
         const normalizedBooksName = stringPattern(data.booksName);
-        const bookId = books[books.length - 1].id + 1 || 1
+
 
         const duplicatedBook = books.find(b => stringPattern(b.name) === normalizedBooksName);
         if (duplicatedBook) {

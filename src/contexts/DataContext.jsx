@@ -11,6 +11,8 @@ console.log(books)
 console.log(authors)
 useEffect(() => {
 
+ 
+
     const storedBooks = JSON.parse(localStorage.getItem('books')) || [];
     const storedAuthors = JSON.parse(localStorage.getItem('authors')) || [];
     setBooks(storedBooks);

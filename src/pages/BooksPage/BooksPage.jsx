@@ -21,15 +21,15 @@ export default function BooksPage() {
                     <StyledTabela>
                         <h1>Livros</h1>
                         {booksWithAuthors.map((book) => (
-                            <TableRow data={book} setOpen={setOpen} type="book" />
+                            <TableRow key={book.id} data={book} setOpen={setOpen} type="book" />
                         ))}
                     </StyledTabela>
                 )}
 
                 <Dialog.Root open={open} onOpenChange={setOpen}>
 
-                    <Dialog.Trigger>
-                        <button id="bottonCreate">CRIAR</button>
+                    <Dialog.Trigger >
+                        <p id="bottonCreate">CRIAR</p>
                     </Dialog.Trigger>
 
                     <FormDialog type="book" setOpen={setOpen}></FormDialog>

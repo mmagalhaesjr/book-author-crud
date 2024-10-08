@@ -53,7 +53,7 @@ export const StyledHeader = styled.header`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.div`
   width: 80%;
   display: flex;
   align-items: center;

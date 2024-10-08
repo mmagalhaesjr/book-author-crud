@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import { StyledMenuMobile } from "./styled";
+import PropTypes from "prop-types";
 
 
-
-// eslint-disable-next-line react/prop-types
 export default function MenuMobile({ mobileAtivado }) {
 
-
   return (
-    <StyledMenuMobile mobile={mobileAtivado}>
+    <StyledMenuMobile mobile={mobileAtivado.toString()}>
       <nav>
         <Link to={"/"} >HOME</Link>
         <Link to={"/livros"} >LIVROS</Link>
@@ -17,3 +15,8 @@ export default function MenuMobile({ mobileAtivado }) {
     </StyledMenuMobile>
   );
 }
+
+
+MenuMobile.propTypes = {
+  mobileAtivado: PropTypes.bool.isRequired,
+};
